@@ -554,19 +554,30 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 /*---------footer---------------------------------------------------*/
 .page__whoweare {
-	margin: 80px 0px 130px 0px
+	margin: 80px 0px 30px 0px
 }
 .whoweare {
-	padding: 80px 0 130px 0 ;
+	padding: 80px 0 30px 0 ;
+	background: #fff;
 }
+
+@media (max-width: 950px) {
+	.whoweare {
+		padding: 50px 0 50px 0;
+	}
+}
+
 .whoweare__container {
 }
 .whoweare__header {
 	margin: 0px 0px 100px 0px;
 }
+
 .whoweare__body {
 	display: flex;
+	align-items: flex-start;
 }
+
 .whoweare__video {
 	flex: 0 0 57%;
 	position: relative;
@@ -582,26 +593,230 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 .whoweare__content {
 	flex: 1 1 auto;
-	padding: 0px 0px 0px 121px;
+	padding: 20px 0px 0px 121px;
+}
+
+@media (max-width: 992px) {
+	.whoweare__content {
+		padding: 0px 0px 0px 50px;
+	}
+	.whoweare__body {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.whoweare__content {
+		padding: 0px 0px 0px 0px;
+	}
+	.whoweare__content:not(:last-child) {
+		margin: 0px 0px 50px 0px;
+	}
+
+	.whoweare__vide{
+		padding: 0px 0px 56.25% 0px;
+	}
+	.whoweare__title {
+		font-size: 24px;
+	}
+	.whoweare__header {
+		margin: 0px 0px 40px 0px;
+	}
+}
+
+@media (max-width: 767px) {
+	.whoweare {
+		padding: 0px 0px 0px 0px;
+	}
+	.whoweare__top:not(:last-child) {
+		margin: 0px 0px 30px 0px;
+	}
+	.whoweare__video:not(:last-child) {
+		margin: 0px 0px 0px 0px;
+	}
+}
+
+.whoweare__top:not(:last-child) {
+	margin: 0px 0px 50px 0px;
 }
 .whoweare__title {
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 1.42;
+	letter-spacing: 0.2px;
+}
+
+.whoweare__title:not(:last-child) {
+	margin: 0px 0px 10px 0px;
 }
 .whoweare__text {
+	line-height: 1.42;
+	color: #737373;
 }
 .whoweare__items {
 }
 .whoweare__item {
 }
+.whoweare__item:not(:last-child) {
+	margin: 0px 0px 30px 0px;
+}
 .item-whoweare {
+	display: flex;
 }
 .item-whoweare__icon {
+	flex: 0 0 32px;
 }
 .item-whoweare__body {
+	flex: 1 1 auto;
+	padding: 0px 0px 0px 20px;
 }
 .item-whoweare__title {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.item-whoweare__title:not(:last-child){
+	margin: 0px 0px 5px 0px;
 }
 .item-whoweare__text {
+	line-height: 1.42;
+	color: #737373;
+	white-space: nowrap;
+	width: 223px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
+
+/*---------clients---------------------------------------------------*/
+
+.page__clients {
+	margin: 0px 0px 10px 0px;
+}
+.clients{
+	padding: 50px 8px;
+}
+
+@media (max-width: 767px) {
+	.clients{
+		padding: 30px 8px;
+	}
+}
+.clients__container {
+}
+.clients__items {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.clients__item {
+	padding: 0px 15px;
+	flex: 0 1 16.667%;
+	text-align: center;
+	min-width: 140px;
+}
+
+.clients__item img {
+	max-width: 100%;
+}
+
+/*---------subscribe---------------------------------------------------*/
+
+.page__subscribe {
+}
+.subscribe {
+	position: relative;
+	padding-bottom: 20px;
+}
+
+.subscribe::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 77px;
+	left: 0;
+	background: #252B42;
+}
+.subscribe__container {
+}
+.subscribe__body {
+	position: relative;
+	z-index: 2;
+	padding: 30px 50px;
+	background-color: #17213C;
+}
+
+@media (min-width: 1070px) {
+	.subscribe__body {
+		margin: 0px 30px;
+	}
+}
+
+.subscribe__title {
+	flex: 0 1 50%;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 32px;
+	color: #fff;
+	letter-spacing: 0.1;
+}
+
+@media (max-width: 810px) {
+	.subscribe__title{
+		margin-bottom: 20px;
+	}
+	.subscribe__body {
+		padding: 20px 25px;
+		margin: -15px;
+	}
+}
+
+@media (min-width: 810px) {
+	.subscribe__title{
+		max-width: 266px;
+	}	
+}
+.subscribe__form {
+	flex: 0 1 50%;
+	display: flex;
+	align-items: center;
+}
+.subscribe__input {
+	width: 100%;
+	flex: 1 1 auto;
+	min-height: 58px;
+	padding: 0px 20px;
+	color: #737373;
+	border-right: 0;
+	background: #F9F9F9;
+	border: 1px solid #E6E6E6;
+	border-radius: 5px 0 0 5px;
+}
+.subscribe__input:focus {
+	color: #000000;
+}
+.subscribe__button {
+	background: #FF7B47;
+	border: 1px solid #E6E6E6;
+	border-radius: 0px 5px 5px 0px;
+	display: flex;
+	min-height: 58px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	padding: 0px 22px;
+}
+
+@media (max-width: 810px) {
+	.subscribe__button {
+		padding: 0px 15px;
+	}
+	.subscribe__input {
+		padding: 0px 15px;
+	}
+}
+
 /*---------footer---------------------------------------------------*/
 .footer {
 
